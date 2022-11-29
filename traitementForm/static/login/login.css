@@ -1,0 +1,68 @@
+/*Important de bibliotheques*/
+@import '../asset/style/style-main.css';
+.blok-page { 
+    margin: 4% 0% 0% 15%;
+    padding: 2rem;
+    /* background: red; */
+    position: absolute;
+    overflow: hidden;
+}
+.card {
+    border: none !important;
+    background: transparent !important;
+}
+/* text de card  / img */
+.display-1,
+.display-2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--txt-color);
+}
+.card-text,
+.lead{
+    font-size: 1rem;
+    color: var(--txt-color);
+}
+img {
+    object-fit: contain;
+    width: 320px;
+    height: 320px;
+}
+/* end text de card  */
+
+/*===== FORM =====*/  
+.form-control{
+    position: relative; 
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    font-size: var(--normal-font-size);
+    font-weight: bold; 
+    border-radius: 0px;
+    outline: none; 
+    /* background: none;  */
+    transition: all .3s ease-in-out;
+}
+/*Input focus*/
+.form-control:focus{
+    border-left: 2px solid #6547dc;
+    box-shadow: none;
+} 
+.footer-form a {
+    position: absolute;
+    right: 0%;
+    margin-top: 0.45rem;
+    color: red;
+}
+a {
+    text-decoration: underline; 
+}
+button.btn{
+  width: 100%; 
+  height: 100%;
+  border-radius: 0px;
+  background-color: #6547dc !important;
+  padding: 0.67rem;
+  transition: all .3s ease-in; 
+  border: none;
+}

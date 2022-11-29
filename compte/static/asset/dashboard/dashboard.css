@@ -1,0 +1,143 @@
+/*********************************
+import ===lib
+*********************************/
+@import '../../asset/style/style-main.css';
+
+/*********************************
+Navbar
+*********************************/
+.navbar {
+    /* display: block;
+    position: fixed;
+    z-index: 1024;
+    width: 100%;
+    height: 80px;
+    padding: 1rem;
+    padding-left: 10rem;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.061);
+    top: 0;
+    left: 0;
+    background-color: #262626 !important; */
+}
+
+.bg-nav-title {
+    text-align: center;
+    padding: 1.25rem;
+    background-color: #1b2c40 !important;
+    top: 0;
+    left: 0;
+}
+
+.bg-nav-title a {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #67db82 !important;
+}
+
+.navbar .navbar-menu-items {
+    position: relative;
+    width: 100%;
+    height: auto;
+    right: 0;
+    top: 0;
+    margin-left: 150%;
+}
+
+.header {
+    display: inline-flex;
+    padding: 1rem;
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+    /* background-color: red; */ ;
+}
+
+.header h2 {
+    color: #1b2c40; 
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+/*********************************
+Card dashboard
+*********************************/
+.dashboard .card {
+    display: grid;
+    overflow: hidden;
+    padding: 1rem 0rem 3rem 0rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard .card-circle {
+    padding: 3rem 3rem 0rem 3rem;
+    margin: 1rem;
+    /* background-color: red; */
+    position: relative;
+    display: block;
+}
+
+.dashboard .circle-card-gris {
+    display: inline-block;
+    height: 10rem;
+    width: 10rem;  
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.dashboard .card-cicle-text {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    color: #1b2c40; 
+    font-size: 2rem;
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+}
+
+.dashboard h5 {
+    display: block;
+    color: #1b2c40; 
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/*********************************
+static-progress
+*********************************/
+.static-progress {
+    display: grid;
+    position: relative;
+    padding: 0.35rem;
+    margin: 0rem;
+height: 190px auto;
+}
+.static-progress .lead {
+    display: block;
+    font-size: var(--normal-font-size);
+    font-weight: bold;
+}
+.progress-title {
+    font-weight: bold;
+    color: #1b2c40;
+} 
+
+/*********************************
+static-progress-two
+*********************************/
+.static-progress-two {
+    display: grid;
+    /* padding: 0.47rem; */
+    /* margin: 0rem; */
+}
+.static-progress-two .list-group-item {
+    display: inline;
+    border: none;
+}
+.list-group-item .tarif {
+    position: absolute;
+    font-weight: bold;
+    right: 0%;
+}

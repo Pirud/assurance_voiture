@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord</title>
+    <link rel="stylesheet" href="{% static 'asset/dashboard/dashboard.css' %}">
+    <script src="{% static 'asset/lib/bootstrap-5.1.3-dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'asset/lib/font-awasome/js/all.min.js' %}"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- nav-bar  -->
+        <div class="row">
+            <div class="col-lg-2 col-md-12 col-sm-12 navbar-dark bg-dark bg-nav-title">
+                <a href="{% url 'traitementForm:list_adherant' %}">GBC  ASSURANCE</a>
+            </div>
+            <div class="navbar navbar-expand-lg navbar-light bg-light col-lg-10 col-md-12 col-sm-12">
+                <nav>
+                    <div class="navbar-menu-items" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                          </li>
+                          
+                          <li class="nav-item dropdown">                           
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="fa fa-users"></span><span class="user-profil">Mon compte</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="#">Mon profil</a></li>
+                              <li><a class="dropdown-item" href="#">{{request.user}}</a></li>
+                              <li><a class="dropdown-item" href="#">A propos</a></li>
+                              <hr class="">
+                              <li><a class="dropdown-item" href="#">Paramétres</a></li>
+                              <li><a class="dropdown-item" href="{% url 'compte:deconnecter' %}">Déconnexion</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>                  
+                </nav>
+            </div>
+        </div>
+        <!-- #nav-bar  -->  
+        
+        <!-- header-dashboard -->
+        <div class="row header">
+            <div class="col-lg-12 col-md-6 col-sm-12">
+                <h2>Aperçu du Tableau de bord <hr class=""></h2> 
+            </div> 
+        </div>
+        <!-- #header-dashboard  -->
+
+        <!-- card du dashboard -->
+        <div class="row">
+            <div class="col-xl-3 col-lg-6 col-sm-1 grid-margin stretch-card dashboard">
+                <div class="card" style="width: auto; text-align: center;">
+                    <div class="card-circle">
+                      <div class="round-circle circle-card-gris" style="border: 20px solid #67db82;">
+                      <h2 class="card-cicle-text">{{nombre_client}}</h2>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Client</h5>
+                      <p class="card-text"></p>
+                      <a href="{% url 'traitementForm:list_adherant' %}" class="btn btn-success" style="background-color: #67db82; border: none;">Client</a>
+                    </div> 
+                  </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card dashboard">
+                <div class="card" style="width: auto; text-align: center;">
+                    <div class="card-circle">
+                      <div class="round-circle circle-card-gris" style="border: 20px solid #f63854;">
+                      <h2 class="card-cicle-text">{{nombre_voiture}}</h2>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Voiture</h5>
+                      <p class="card-text"></p>
+                      <a href="{% url 'traitementForm:list_vehicule' %}" class="btn btn-success" style="background-color: #f63854; border: none;">Voiture</a>
+                    </div> 
+                  </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card dashboard">
+                <div class="card" style="width: auto; text-align: center;">
+                    <div class="card-circle">
+                      <div class="round-circle circle-card-gris" style="border: 20px solid #6547dc;">
+                      <h2 class="card-cicle-text">{{nombre_sinistre}}</h2>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Sinistre</h5>
+                      <p class="card-text"></p>
+                      <a href="{% url 'traitementForm:list_sinistre' %}" class="btn btn-success" style="background-color: #6547dc; border: none;">Sinistre</a>
+                    </div> 
+                  </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card dashboard">
+                <div class="card" style="width: auto; text-align: center;">
+                    <div class="card-circle">
+                      <div class="round-circle circle-card-gris" style="border: 20px solid #ec754d;">
+                      <h2 class="card-cicle-text">{{nombre_assurance}}</h2>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">assurance</h5>
+                      <p class="card-text"></p>
+                      <a href="{% url 'traitementForm:list_assurance' %}" class="btn btn-success" style="background-color: #ec754d; border: none;">assurance</a>
+                    </div> 
+                  </div>
+            </div>
+        </div>
+        <!-- static-progress -->
+        <div class="row mt-2 mb-3">
+          <div class="col-lg-8 col-md-6 col-sm-12">
+            <div class="card static-progress" style="width: auto;">
+              <div class="card-body">
+                <div class="lead">Running Progress</div>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nisi, quaerat, consequuntur ab ad illum error nesciunt</small>
+                <hr class="">
+                <div class="row align-items-start">
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="background-color: red;">+ 252.3£</div>
+                    </div>
+                    <h6 class="progress-title mt-2"><span class="fa fa-circle" style="color: #4389f1;"></span>
+                    Carte (40%)</h6>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="background-color: red;">+ 252.3£</div>
+                    </div>
+                    <h6 class="progress-title mt-2"><span class="fa fa-circle" style="color: #67db82;"></span>
+                    Trésorerie (20%)</h6>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="background-color: red;">+ 252.3£</div>
+                    </div>
+                    <h6 class="progress-title mt-2"><span class="fa fa-circle" style="color: #8d79ce;"></span>
+                    Carte cadeau (20%)</h6>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="background-color: red;">+ 252.3£</div>
+                    </div>
+                    <h6 class="progress-title mt-2"><span class="fa fa-circle" style="color: #f63854;"></span>
+                    Autres (20%)</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- static-progress-two -->
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card static-progress-two">
+              <div class="card-body"> 
+		<ul class="list-group">
+                  <li class="list-group-item">adhérents actifs :
+                  <span class="tarif">1293</span></li>
+                </ul>
+                <ul class="list-group">
+                  <li class="list-group-item">sinistre déclarés :
+                  <span class="tarif">1203</span></li>
+                </ul>
+                <ul class="list-group">
+                  <li class="list-group-item" style="color: #398ee7;">sinistre non-triatés :
+                  <span class="tarif" style="color: #398ee7;">89%</span></li>
+                </ul>
+                <ul class="list-group">
+                  <li class="list-group-item" style="color: red;">sinistre triatrés :
+                  <span class="tarif" style="color: red;">11%</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- #card du dashboard -->
+
+        <!-- button-menu  
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <button type="button" class="btn btn-danger">Left</button>
+                    <button type="button" class="btn btn-warning">Middle</button>
+                    <button type="button" class="btn btn-success">Right</button>
+                  </div>
+            </div>
+        </div>
+         #button-menu  -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.title-header {
+    font-size: 2rem !important;
+    color: #729bc7 !important;
+}
+.card {
+    display: grid;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+}
+.display-1 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2626269a;
+}
+.lead {
+    font-size: var(--normal-font-size);
+    color: #2626269a;   
+}

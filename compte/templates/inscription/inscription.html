@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authetification - GBC</title>
+
+    <!-- File style/CSS -->
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <!-- File script/JS  -->
+    <script src="{% static 'asset/lib/bootstrap-5.1.3-dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'asset/lib/font-awasome/js/all.min.js' %}"></script>
+</head>
+<body>
+    <div class="container"> 
+        <div class="blok-page border">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <img src="{% static 'asset/img/about_x2.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="display-1">Gestion d'Assurance</div>
+                        <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <form action="" method="post">
+                    {%csrf_token%}
+                    <div class="mb-3">
+                        <div class="display-2">Creer compte</div>
+                        <div class="lead">Lorem ipsum dolor sit amet.</div>
+                        <hr class="">
+                    </div>
+                    <div class="mb-3 col-12">
+                        <label for="exampleInputUsername" class="form-label">
+                            <span><i class="fas fa-user"></i> | Nom d'utilisateur.</span></label>
+                        {{form.username}}
+                    </div>
+
+                    <div class="mb-3 col-12">
+                        <label for="exampleInputUsername" class="form-label">
+                            <span><i class="fas font-user"></i> | @mail</span></label>
+                            {{form.email}}
+                    </div>
+                    <div class="mb-3 col-12">
+                        <label for="exampleInputPasswrd" class="form-label">
+                            <span><i class="fas fa-lock"></i> | Nouveau Mot de passe</span></label>
+                            {{form.password1}}
+                    </div>
+
+                    <div class="mb-3 col-12">
+                        <label for="exampleInputPasswrd" class="form-label">
+                            <span><i class="fas fa-lock"></i> | Confirmer Mot de passe</span></label>
+                            {{form.password2}}
+                    </div>
+
+                    
+                    <div class="mb-3 form-check col-12">
+                        {% for message in messages %}
+                        <p id="message">{{message}}</p>
+                        {% endfor %}
+                    </div>
+
+                    <div class="mb-3 footer-form col-12">
+                        <button class="btn btn-success">
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>Se connecter
+                        </button> <br>
+                        <a href="{% url 'compte:acces' %}">Avez vous deja un compte?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>         
+    </div>
+</body>
+</html>

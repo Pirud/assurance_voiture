@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authetification - GBC</title>
+    <!-- File style/CSS -->
+    <link rel="stylesheet" href="asset/style/style-main.css">
+    <link rel="stylesheet" href="asset/style/login.second.css">
+
+    <!-- File script/JS  -->
+    <script src="asset/script/bootstrap.min.js"></script>
+    <script src="asset/script/all.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid"> 
+        <div class="row">
+            <div class="background__image"
+            style="background-image: url('asset/img/slider1.jpg');"></div>
+            <div class="blok-page">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <div class="card">
+                            <div class="header-card">
+                                <div class="display-1">G B C</div>
+                                <p class="lead">Gestion d'assurance</p>
+                                <hr class="text-white">
+                            </div>
+                        </div>
+                        <form action="" method="post">
+                            <div class="mb-3 col-12">
+                                <label for="validationCustomUsername" class="form-label">Nom d'utilisateur.</label>
+                                <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                aria-describedby="inputGroupPrepend" placeholder="Votre nom d'utilisateur" required>
+                                <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="validationCustomPassword" class="form-label">Mot de passe.</label>
+                                <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-lock"></i></span>
+                                <input type="password" class="form-control" id="validationCustomPassword"
+                                aria-describedby="inputGroupPrepend" placeholder="Votre mot de passe" required>
+                                <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3 form-check col-12">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label text-white" for="exampleCheck1">caractères de mot de passe</label>
+                            </div>
+                            <div class="mb-3 footer-form col-12">
+                                <button class="btn btn-success">
+                                    <span class="fa fa-arrow-right" aria-hidden="true"></span>Se connecter
+                                </button> <br>
+                                <a href="http://">Mot de passe oublier ?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="card card-reseaux-socio">
+                        <a href="" class="col-sm-6 me-4 text-reset">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="" class="col-sm-6 me-4 text-reset">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="" class="col-sm-6 me-4 text-reset">
+                          <i class="fab fa-google"></i>
+                        </a>
+                        <a href="" class="col-sm-6 me-4 text-reset">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="" class="col-sm-6 me-4 text-reset">
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="" class="col-sm-6 me-4 text-reset">
+                          <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

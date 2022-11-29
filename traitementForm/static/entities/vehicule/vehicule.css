@@ -1,0 +1,91 @@
+/*********************************
+import ===lib
+*********************************/
+@import '../../asset/style/style-main.css';
+
+/*********************************
+Navbar
+*********************************/
+.navbar {
+    /* display: block;
+    position: fixed;
+    z-index: 1024;
+    width: 100%;
+    height: 80px;
+    padding: 1rem;
+    padding-left: 10rem;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.061);
+    top: 0;
+    left: 0;
+    background-color: #262626 !important; */
+}
+
+.bg-nav-title {
+    text-align: center;
+    padding: 1.25rem;
+    background-color: #1b2c40 !important;
+    top: 0;
+    left: 0;
+}
+
+.bg-nav-title a {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #67db82 !important;
+}
+
+.navbar .navbar-menu-items {
+    position: relative;
+    width: 100%;
+    height: auto;
+    right: 0;
+    top: 0;
+    margin-left: 150%;
+}
+
+/*********************************
+header
+*********************************/
+.header {
+    display: inline-flex;
+    padding: 1rem;
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+    /* background-color: red; */ ;
+}
+.header h2 {
+    color: #1b2c40; 
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+.header {
+    display: inline-flex;
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+    /* background-color: red; */ ;
+}
+.header .title-header {
+    color: #1b2c40; 
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+.header button {
+    /* display: block; */
+    height: 3rem;
+    border: none !important;
+    border-radius: 0% !important;
+}
+
+/*********************************
+tableau
+*********************************/
+.table-responsive {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
